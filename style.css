@@ -1,0 +1,107 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+html,body{
+    margin:0;
+    height:100%;
+}
+section{
+    flex-shrink:0;
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    background-color:var(--calculator);
+    padding: 20px;
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(7, auto);
+    grid-gap: 15px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+#display
+{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:1;
+    grid-row-end:3;
+    background-color:var(--screen);
+    border-radius: 10px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-right: 20px;
+    flex-direction: column;
+    padding-top: 0px;
+    border: 1px solid black;
+}
+#main_display
+{
+    display:flex;
+    font-size: 2rem;
+    flex-grow: 3;
+    align-items: center;
+}
+#sec_display{
+    height: 10px;
+}
+button{
+    box-shadow: none;
+    border-radius: 10px;
+    background-color: var(--btn);
+    border: 1px solid black;
+}
+button:hover{
+    background-color: var(--btn-hover)
+}
+button:active{
+    background-color: var(--btn-active)
+}
+#clear{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color:var(--btn-red);
+
+}
+#clear:hover{
+    background-color: var(--btn-red-hover)
+}
+#clear:active{
+    background-color: var(--btn-red-active)
+}
+#delete{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color:var(--btn-blue);
+}
+#delete:hover{
+    background-color: var(--btn-blue-hover)
+}
+#delete:active{
+    background-color:var(--btn-blue-active)
+}
+*{
+    font: var(--font);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+:root {
+    --background:  #f6f6f6;
+    --font:  #222;
+    --border:  #333;
+    --screen:  #eee;
+    --calculator:  #aaa;
+    --btn:  #eee;
+    --btn-hover:  #ddd;
+    --btn-active:  #ccc;
+    --btn-red:  #faa;
+    --btn-red-hover:  #e99;
+    --btn-red-active:  #d88;
+    --btn-blue:  #aaf;
+    --btn-blue-hover:  #99e;
+    --btn-blue-active:  #88d;
+}
